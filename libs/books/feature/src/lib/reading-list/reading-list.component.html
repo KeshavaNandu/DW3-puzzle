@@ -6,7 +6,7 @@
     <div class="reading-list-item--details">
       <strong class="reading-list-item--details--title">{{ book.title }}</strong>
       <div class="reading-list-item--details--author">
-        {{ book.authors.join(',') }}
+        {{ book.authors }}
       </div>
     </div>
     <div>
@@ -14,7 +14,7 @@
         mat-icon-button
         color="warn"
         [attr.aria-label]="'Remove ' + book.title + ' from reading list'"
-        (click)="removeFromReadingList(b)"
+        (click)="removeFromReadingList(book)"
       >
         <mat-icon>remove_circle</mat-icon>
       </button>
